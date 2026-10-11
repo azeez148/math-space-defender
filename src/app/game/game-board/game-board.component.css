@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  touch-action: none;
+}
+
+.touch-controls {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.touch-controls button {
+  background: #172b45cc;
+  border: 1px solid #496782;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #c4edff;
+  touch-action: none;
+}
+
+@media (pointer: fine) {
+  .touch-controls {
+    display: none;
+  }
+}

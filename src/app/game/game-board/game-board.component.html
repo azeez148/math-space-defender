@@ -1,0 +1,32 @@
+<canvas
+  #canvas
+  width="1000"
+  height="560"
+  aria-label="Space battlefield. Use arrow keys to move, number keys to select an answer, and Space to shoot."
+  (pointermove)="aim($event)"
+  (pointerdown)="shoot($event)"
+></canvas>
+
+<div class="touch-controls">
+  <button
+    aria-label="Move left"
+    (pointerdown)="hold(-1, $event)"
+    (pointerup)="release()"
+    (pointercancel)="release()"
+    (pointerleave)="release()"
+  >
+    ◀
+  </button>
+
+  <button (click)="fire()">FIRE</button>
+
+  <button
+    aria-label="Move right"
+    (pointerdown)="hold(1, $event)"
+    (pointerup)="release()"
+    (pointercancel)="release()"
+    (pointerleave)="release()"
+  >
+    ▶
+  </button>
+</div>
